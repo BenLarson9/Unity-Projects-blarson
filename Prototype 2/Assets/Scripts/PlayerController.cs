@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     z coordinate is not centered, so i have to have 2 separate variables and im not redoing it*/
     public float zRangeup = 20;
     public float zRangdown = 0;
+    public GameObject projectilePrefab;
 
 
 
@@ -29,5 +30,9 @@ public class PlayerController : MonoBehaviour
            {
             transform.position = new Vector3(transform.position.x, transform.position.y, zRangdown);
            }
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        { Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation); }
+
+
     }
 }
