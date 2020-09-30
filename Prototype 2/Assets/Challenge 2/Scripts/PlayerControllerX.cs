@@ -14,7 +14,7 @@ public class PlayerControllerX : MonoBehaviour
     {
         
         cooldownTime = cooldownTime -1 * Time.deltaTime;
-        Debug.Log(cooldownTime);
+        
         if (Input.GetKeyDown(KeyCode.Space) && cooldownTime <= 0)
         {
             Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
